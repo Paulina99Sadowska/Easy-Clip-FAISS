@@ -1,0 +1,60 @@
+CLIP + FAISS Image Search
+
+Prosty projekt demonstracyjny pokazujący, jak użyć OpenAI CLIP i FAISS do wyszukiwania podobnych obrazów w lokalnej bazie danych.
+
+Umożliwia przesyłanie zdjęcia przez przeglądarkę za pomocą Gradio i zwraca najbardziej podobne obrazy z bazy wraz z ich etykietami.
+
+Funkcjonalności
+
+Ładowanie obrazów z lokalnego folderu (.jpg, .jpeg, .png)
+
+Tworzenie embeddingów obrazów przy użyciu CLIP
+
+Budowa indeksu FAISS do szybkiego wyszukiwania podobieństwa
+
+Interaktywne wyszukiwanie w przeglądarce dzięki Gradio
+
+Wyświetlanie top-3 podobnych obrazów wraz z nazwami
+
+Przykładowe kategorie obrazów
+
+W tej prostej bazie użyto następujących kategorii:
+
+cat
+coffee
+camera
+girl
+house_wife
+motorcycle_right
+page
+teacher
+
+
+Możesz oczywiście dodać własne obrazy i kategorie, aby dostosować projekt do swoich potrzeb.
+
+Wymagania
+pip install torch torchvision transformers pillow faiss-cpu gradio numpy
+
+
+Jeśli używasz GPU, możesz zainstalować faiss-gpu.
+
+Instrukcja użycia
+
+Umieść swoje obrazy w folderze, np. C:\Users\user\Desktop\CLIP
+
+Uruchom skrypt clip_faiss_gradio.py
+
+Otworzy się przeglądarka z interfejsem Gradio
+
+Prześlij obraz → zobaczysz top-3 podobne obrazy z bazy
+
+Struktura projektu
+CLIP-FAISS-ImageSearch/
+│
+├─ CLIP/                 # folder z obrazami testowymi
+├─ clip_faiss_gradio.py  # główny skrypt Python
+├─ README.md             # opis projektu
+
+Przykładowy efekt
+
+Po przesłaniu zdjęcia kota w Gradio, system zwróci miniaturki podobnych obrazów i ich nazwy (np. cat, cat_highres).
